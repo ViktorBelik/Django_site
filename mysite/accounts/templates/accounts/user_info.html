@@ -1,0 +1,77 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Информация пользователя" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="accounts__title-container">
+    <div class="accounts__button-container">
+      <h1 class="h1__title">Информация о пользователе</h1>
+    </div>
+  </div>
+  <div class="profile__base-container">
+    <div class="user__info-container">
+      <div class="profile__info-user">
+        <div class="profile__avatar-container">
+          <div class="profile__avatar">
+            {% if x_user.avatar %}
+              <img src="{{ x_user.avatar.url }}" alt="Photo by {{ x_user.username }}" class="profile__avatar-img">
+            {% else %}
+              <img src="{{ default_image }}" alt="Default User" class="profile__avatar-img">
+            {% endif %}
+          </div>
+          <div class="profile__username">
+            <h3 class="profile__h3">{{ x_user.username }}</h3>
+            <span class="profile__span">Дата регистрации: {{ x_user.date_joined|date:"j E Y" }}</span>
+          </div>
+        </div>
+        <div class="profile__field-container">
+          <div class="profile__field">
+            <label class="profile__label">Имя</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.first_name }}" class="profile__input" name="first_name">
+            </div>
+          </div>
+          <div class="profile__field">
+            <label class="profile__label">Фамилия</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.last_name }}" class="profile__input" name="last_name">
+            </div>
+          </div>
+          <div class="profile__field">
+            <label class="profile__label">Email</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.email }}" class="profile__input" name="email">
+            </div>
+          </div>
+          <div class="profile__field">
+            <label class="profile__label">Телефон</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.phone }}" class="profile__input" name="phone">
+            </div>
+          </div>
+          <div class="profile__field">
+            <label class="profile__label">О себе</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.about_me }}" class="profile__input" name="about_me">
+            </div>
+          </div>
+          <div class="profile__field">
+            <label class="profile__label">День рождения</label>
+            <div class="profile__input-container">
+              <input value="{{ x_user.date_birth|date:"d.m.Y" }}" class="profile__input" name="date_birth">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__actions-container">
+      <a href="{% url 'accounts:user-list' %}" class="light-button">Пользователи</a>
+      {% if user.is_staff or user == x_user %}
+        <a class="color-button" href="{% url 'accounts:user-edit' pk=x_user.pk %}">Редактировать</a>
+      {% endif %}
+    </div>
+  </div>
+{% endblock body %}

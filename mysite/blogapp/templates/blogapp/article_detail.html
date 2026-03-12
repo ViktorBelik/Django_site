@@ -1,0 +1,17 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Статья" %} №{{ object.pk }}
+{% endblock title %}
+
+{% block body %}
+  <div>
+    <h1>{{ article.title }}</h1>
+    <p>Опубликовано: {{ article.published_at }}</p>
+    <p>{{ article.body }}</p>
+  </div>
+  <div>
+    <a href="{% url "blogapp:articles" %}">К списку статей</a>
+  </div>
+{% endblock body %}

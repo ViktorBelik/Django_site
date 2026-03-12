@@ -1,0 +1,41 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Список пользователей" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="accounts__title-container">
+    <div class="accounts__button-container">
+      <h1 class="h1__title">Пользователи</h1>
+    </div>
+  </div>
+  <div class="user__base-container">
+    <div class="user__block-container">
+      <h3 class="user__h3">Найдено: {{ users_found }}</h3>
+      {% if users %}
+        <table class="users__table">
+          <thead class="users__thead">
+          <tr>
+            <th class="users__th">№</th>
+            <th class="users__th">User</th>
+            <th class="users__th">Email</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for user in users %}
+              <tr>
+                <td class="users__counter users__td">{{ forloop.counter }}</td>
+                <td  class="users__td">
+                  <a href="{% url "accounts:user-info" pk=user.pk %}" class="users__link">{{ user.username }}</a>
+                </td>
+                <td  class="users__td">{{ user.email }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
+    </div>
+  </div>
+{% endblock body %}

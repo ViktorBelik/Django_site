@@ -1,0 +1,63 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+{% load cache %}
+
+{% block title %}
+  {% translate "Главная" %}
+{% endblock title %}
+
+{% block body %}
+<div class="main__container">
+  {% comment %} Кэширование для фрагмента шаблона {% endcomment %}
+    {% cache 200 title user.username %}
+      <div class="shopapp__title-container">
+        <h1 class="h1__title">DTE | Магазин цифровой и бытовой техники</h1>
+      </div>
+    {% endcache %}
+    <div class="main__top-block">
+      <div class="main__slider-base">
+        <div class="main__slider-control">
+          <button id="PrevBTN" class="main__slider-button main__slider-button-prev"></button>
+          <button id="NextBTN" class="main__slider-button main__slider-button-next"></button>
+        </div>
+        <div class="main__slider-container">
+          <div class="main__slider-container-slides">
+            <div class="main__slider-item background-catalog">
+              <a href="{% url 'shopapp:products_list' %}" class="main__slider-item-link">
+                <div class="main__slider-item-title">Каталог</div>
+                <div class="main__slider-item-text">Большой выбор техники</div>
+              </a>
+            </div>
+            <div class="main__slider-item background-promotions">
+              <a href="{% url 'shopapp:products_list' %}" class="main__slider-item-link">
+                <div class="main__slider-item-title">Акции</div>
+                <div class="main__slider-item-text">Скидки, рассрочки, выгодные комплекты</div>
+              </a>
+            </div>
+            <div class="main__slider-item background-assemble">
+              <a href="{% url 'shopapp:products_list' %}" class="main__slider-item-link">
+                <div class="main__slider-item-title">Собрать ПК</div>
+                <div class="main__slider-item-text">Без проблем с совместимостью</div>
+              </a>
+            </div>
+            <div class="main__slider-item background-help">
+              <a href="{% url 'shopapp:products_list' %}" class="main__slider-item-link">
+                <div class="main__slider-item-title">Помощь</div>
+                <div class="main__slider-item-text">Частые вопросы, полезная информация</div>
+              </a>
+            </div>
+            <div class="main__slider-item background-service">
+              <a href="{% url 'shopapp:products_list' %}" class="main__slider-item-link">
+                <div class="main__slider-item-title">Сервис</div>
+                <div class="main__slider-item-text">Гарантия, возврат, обмен и ремонт</div>
+              </a>
+            </div>
+            <div class="main__slider-item background-color"></div>
+            <div class="main__slider-item background-color"></div>
+            <div class="main__slider-item background-color"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock body %}

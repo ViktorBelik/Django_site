@@ -1,0 +1,114 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "A new Laotop",
+      "price": "43000.00",
+      "discount": 3,
+      "created_at": "2026-01-31T00:35:06.499Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_1/preview/5073d2921eac7f9bd80215bc520b3c1be8df628a61829a2c7912ec412c515af5.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 2,
+    "fields": {
+      "name": "Smartphone",
+      "description": "A new Smartphone",
+      "price": "13000.00",
+      "discount": 0,
+      "created_at": "2026-01-31T00:37:49.574Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_2/preview/3f07b1ffa9193a775d83d5a74fa818307037b9e0cf34e51a18ac31304fceefb9.jpg.webp"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "Laptop 2",
+      "description": "Laptop 2",
+      "price": "56800.00",
+      "discount": 2,
+      "created_at": "2026-01-31T00:40:53.913Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_3/preview/b58e3b5e273b3d58015ee643b4dc0bcf65653ef6e13084300d2b1b0ea79f4884.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Desktop",
+      "description": "A new Desktop",
+      "price": "120000.00",
+      "discount": 1,
+      "created_at": "2026-01-31T00:49:03.368Z",
+      "created_by": "19fffb51-6d3c-4f99-b7b6-55e89991f614",
+      "archived": false,
+      "preview": "products/product_4/preview/fd5bf0e0881688bc53605a7d795063a6d0a1ed3beea944fbb52719a444a07f4f.png"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Desktop 2",
+      "description": "Desktop 2 / i / 99/ 10890",
+      "price": "55800.00",
+      "discount": 5,
+      "created_at": "2026-02-02T23:21:03.782Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_5/preview/a820fcef45b5cc1918d68ba9053300d0ba0348e764772d9dd7b86c30e2dfa580.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Smartphone",
+      "price": "25800.00",
+      "discount": 1,
+      "created_at": "2026-02-02T23:21:40.034Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_6/preview/4ed93379c3d56a4d4f246b63f84e608d7f4f379258d4f1837bca03212910f86e.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "Tablet",
+      "description": "A new Tablet",
+      "price": "3400.00",
+      "discount": 10,
+      "created_at": "2026-02-11T12:28:12.068Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_7/preview/Laptop_1.png"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "A new Tablet 2",
+      "price": "15600.00",
+      "discount": 1,
+      "created_at": "2026-02-11T12:30:12.053Z",
+      "created_by": "731b7175-9b91-4355-a441-158959a87c76",
+      "archived": false,
+      "preview": "products/product_8/preview/Laptop_2.jpg"
+    }
+  }
+]

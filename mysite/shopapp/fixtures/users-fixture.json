@@ -1,0 +1,214 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": "009a57c0-ea1f-4395-97f5-6a994d728ae0",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$VXVjcnV0UkJIclFkM0lsTVZKZ29yNA$5WEAAgCgejPpr15Jp+tlIRwT2x5ywMuvqb1OQ2eyq9Q",
+      "last_login": "2026-02-16T12:09:22.611Z",
+      "is_superuser": false,
+      "username": "Vlad22",
+      "first_name": "Vlad",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-16T12:08:29.730Z",
+      "email": "vlad22@email.com",
+      "phone": "+79990121212",
+      "date_birth": null,
+      "about_me": "",
+      "avatar": "",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "19fffb51-6d3c-4f99-b7b6-55e89991f614",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$QzM4S1hKMEJ4SWZEazl0SkU1ZWhubg$LGD6Um/W7Vlrj/SlX4IGMmh11om3e9CqCgiRKGmY6vw",
+      "last_login": "2026-02-13T06:27:25.245Z",
+      "is_superuser": false,
+      "username": "Nick77",
+      "first_name": "Nick",
+      "last_name": "Marw",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-01-31T00:42:27Z",
+      "email": "nik7777@email.com",
+      "phone": "+79047770099",
+      "date_birth": null,
+      "about_me": "Nick7777",
+      "avatar": "users/user_Nick77/avatar/b58e3b5e273b3d58015ee643b4dc0bcf65653ef6e13084300d2b1b0ea79f4884.jpg",
+      "agreement_accepted": false,
+      "groups": [
+        1,
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "42fc894c-ae04-427a-b4b5-1125ed61132b",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$NkhUQldsUFBXUGZ4VzBSb3luT2Q5eQ$RGHajScRnnA8rToN5X+Q/PYfqUKcZ8g38T4gSQcOtIc",
+      "last_login": "2026-01-31T00:43:56.421Z",
+      "is_superuser": false,
+      "username": "Jhon3Z",
+      "first_name": "Jhon3",
+      "last_name": "Mr",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-31T00:43:56.285Z",
+      "email": "jhon3@gmail.ru",
+      "phone": "+79525552323",
+      "date_birth": "1976-11-11",
+      "about_me": "Jhon",
+      "avatar": "",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "731b7175-9b91-4355-a441-158959a87c76",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$MDYxcU9SdkdVZGNRWjdBamVYaDJ2Rg$TVk5hwn6CirAznV8+stKWzm+jfz/WZXET+jHmjF6Nao",
+      "last_login": "2026-02-17T06:23:28.994Z",
+      "is_superuser": true,
+      "username": "Admin",
+      "first_name": "Berg",
+      "last_name": "Mr",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-01-31T00:28:28Z",
+      "email": "bel.var.dev@gmail.com",
+      "phone": "+79990009900",
+      "date_birth": null,
+      "about_me": "Администратор системы",
+      "avatar": "users/user_Admin/avatar/dev.jpg",
+      "agreement_accepted": false,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "8df6ab72-a2d6-40a3-9ac9-0ec8c58e03a5",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$aEJwRnpHZFM3c2RDYkJYNHVCaXZ3Ng$SL8zqoxJsEoO9A21v0I2HnimNqJvdiorhmrZtmeQ8Uc",
+      "last_login": "2026-02-13T06:12:09.003Z",
+      "is_superuser": false,
+      "username": "Sam12",
+      "first_name": "Samuel",
+      "last_name": "Br",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-31T00:43:00.910Z",
+      "email": "sam12@email.com",
+      "phone": "+79994195656",
+      "date_birth": "1998-11-11",
+      "about_me": "",
+      "avatar": "users/user_Sam12/avatar/skype.png",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "a682c07a-3dd6-481f-bcc4-8eace8c6d71e",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$cnRaOWJGRUdRYlpYQlhRdWNXdjBxVw$U0XkJdYEqsUgyB0wGg+BP3rHmPKBUe8JWIovCNEqLdY",
+      "last_login": "2026-02-16T13:03:33.143Z",
+      "is_superuser": false,
+      "username": "Zero1",
+      "first_name": "Zero",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-16T13:03:07.753Z",
+      "email": "zero1@email.com",
+      "phone": "+79809550909",
+      "date_birth": "1988-10-11",
+      "about_me": "",
+      "avatar": "users/user_Zero1/avatar/5073d2921eac7f9bd80215bc520b3c1be8df628a61829a2c7912ec412c515af5.jpg",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "acfacdd3-6018-4857-9285-09368e9f6ead",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$MmZiQzZZZkZiUXFodXRGanEwV3NDVw$D7U+h9nwyUxsGrjveEHojHQ6CWlEpdQPDRM/IUGwLoQ",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Cerber3",
+      "first_name": "Cerber",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-16T12:36:02.160Z",
+      "email": "cerber3@email.com",
+      "phone": "+79990904545",
+      "date_birth": null,
+      "about_me": "",
+      "avatar": "",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "d0ad8fb4-5e92-427f-8ff8-2e3304051eba",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$dEhqNW16UHdObG1zU0Fkc3E0Sm40QQ$ehGuQMYbCbudIOmGyZLb9HZflQhWY9AZrjySBgOtJxI",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "SDD33",
+      "first_name": "Sdd",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-16T12:39:07.969Z",
+      "email": "sdd33@email.com",
+      "phone": "+79809940909",
+      "date_birth": null,
+      "about_me": "",
+      "avatar": "",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": "df4f7f56-5f11-413c-a231-2251d7604b4d",
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$bld6VklkdUM4SkM2RENkbnRZUUY1Uw$tr4uValGAmvK3Ht+vE7Vb8bND8POHgtfx6beESuNA18",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "David99",
+      "first_name": "David",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-17T01:43:29.091Z",
+      "email": "david99@email.com",
+      "phone": "+79525552332",
+      "date_birth": null,
+      "about_me": "",
+      "avatar": "",
+      "agreement_accepted": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

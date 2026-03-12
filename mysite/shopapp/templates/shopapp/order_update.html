@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Изменение заказа" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="shopapp__title-container">
+    <h1 class="h1__title">Изменение заказа №{{ object.pk }}</h1>
+  </div>
+  <form method='post'>
+    {% csrf_token %}
+    <div class="order__base-container">
+      <div class="order__create-container">
+        <div class="order__create-container-grid">
+          <span>Адрес доставки</span>
+          {{ form.delivery_address }}
+          <span>Товары</span>
+          {{ form.products }}
+          <span>Промокод</span>
+          {{ form.promocode }}
+        </div>
+      </div>
+      <div class="order__actions-container">
+        <a href="{% url "shopapp:order_details" pk=object.pk %}" class="light-button">Отмена</a>
+        <button type='submit' class="color-button">Сохранить</button>
+      </div>
+    </div>
+  </form>
+{% endblock body %}

@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-17 15:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/admin.py:12
+msgid "Personal info"
+msgstr ""
+
+#: accounts/admin.py:14
+msgid "Permissions"
+msgstr ""
+
+#: accounts/admin.py:25
+msgid "Important dates"
+msgstr ""
+
+#: accounts/forms.py:22 accounts/forms.py:76 accounts/forms.py:78
+msgid "Имя пользователя"
+msgstr "Username"
+
+#: accounts/forms.py:25
+msgid "*Никнейм"
+msgstr "*Nickname"
+
+#: accounts/forms.py:31
+msgid "Почта"
+msgstr "Email"
+
+#: accounts/forms.py:34
+msgid "*Email"
+msgstr ""
+
+#: accounts/forms.py:39
+msgid "Номер телефона"
+msgstr "Phone number"
+
+#: accounts/forms.py:41
+msgid "*Телефон"
+msgstr "*Phone"
+
+#: accounts/forms.py:44 accounts/forms.py:46
+#: accounts/templates/accounts/profile.html:50
+msgid "Имя"
+msgstr "First name"
+
+#: accounts/forms.py:49 accounts/forms.py:51
+#: accounts/templates/accounts/profile.html:56
+msgid "Фамилия"
+msgstr "Last name"
+
+#: accounts/forms.py:55
+msgid "*Пароль"
+msgstr "*Password"
+
+#: accounts/forms.py:59
+msgid "*Повторите пароль"
+msgstr "Repeat password"
+
+#: accounts/forms.py:82 accounts/forms.py:85
+msgid "Пароль"
+msgstr "Password"
+
+#: accounts/models.py:39
+msgid "Email address"
+msgstr ""
+
+#: accounts/models.py:45
+msgid "Phone number"
+msgstr ""
+
+#: accounts/models.py:51
+msgid "Date of birth"
+msgstr ""
+
+#: accounts/templates/accounts/base.html:12
+msgid "Магазин цифровой и бытовой техники"
+msgstr "Digital and home appliance store"
+
+#: accounts/templates/accounts/base.html:36
+msgid "Сбросить"
+msgstr "Reset"
+
+#: accounts/templates/accounts/base.html:37
+msgid "Отправить"
+msgstr "Send"
+
+#: accounts/templates/accounts/base.html:50
+msgid "Вернуться на главную"
+msgstr "Back to main page"
+
+#: accounts/templates/accounts/base.html:56
+#: accounts/templates/accounts/base.html:168
+#: shopapp/templates/shopapp/products_list.html:4
+msgid "Каталог"
+msgstr "Catalog"
+
+#: accounts/templates/accounts/base.html:84
+#: accounts/templates/accounts/base.html:171
+msgid "Сравнение"
+msgstr "Compare"
+
+#: accounts/templates/accounts/base.html:104
+#: accounts/templates/accounts/base.html:174
+msgid "Избранное"
+msgstr "Favourites"
+
+#: accounts/templates/accounts/base.html:122
+#: shopapp/templates/shopapp/order_create.html:4
+msgid "Корзина"
+msgstr "Basket"
+
+#: accounts/templates/accounts/base.html:162
+msgid "Покупателям"
+msgstr "To shoppers"
+
+#: accounts/templates/accounts/base.html:165
+#: shopapp/templates/shopapp/main.html:4
+msgid "Главная"
+msgstr "Main"
+
+#: accounts/templates/accounts/base.html:180
+msgid "Контакты"
+msgstr "Contacts"
+
+#: accounts/templates/accounts/base.html:192
+msgid "Связаться"
+msgstr "Callback"
+
+#: accounts/templates/accounts/groups_list.html:4
+msgid "Группы"
+msgstr "Groups list"
+
+#: accounts/templates/accounts/login.html:4
+msgid "Вход"
+msgstr "Login"
+
+#: accounts/templates/accounts/profile.html:5
+msgid "Профиль"
+msgstr "Profile"
+
+#: accounts/templates/accounts/profile.html:10
+msgid "Настройки профиля"
+msgstr "Profile settings"
+
+#: accounts/templates/accounts/profile.html:14
+msgid "Заказы"
+msgstr "Orders"
+
+#: accounts/templates/accounts/profile.html:15
+msgid "Мои отзывы"
+msgstr "My reviews"
+
+#: accounts/templates/accounts/profile.html:16
+msgid "Подписки"
+msgstr "Subscriptions"
+
+#: accounts/templates/accounts/profile.html:17
+msgid "Бонусы"
+msgstr "Bonuses"
+
+#: accounts/templates/accounts/profile.html:18
+msgid "Пользователи"
+msgstr "Users"
+
+#: accounts/templates/accounts/profile.html:35
+msgid "Изменить"
+msgstr "Edit"
+
+#: accounts/templates/accounts/profile.html:41
+msgid "Дата регистрации"
+msgstr "Registration date"
+
+#: accounts/templates/accounts/profile.html:45
+msgid "Выйти"
+msgstr "Exit"
+
+#: accounts/templates/accounts/profile.html:62
+msgid "Email"
+msgstr ""
+
+#: accounts/templates/accounts/profile.html:68
+msgid "Телефон"
+msgstr "Phone"
+
+#: accounts/templates/accounts/profile.html:74
+msgid "О себе"
+msgstr "About me"
+
+#: accounts/templates/accounts/profile.html:80
+msgid "День рождения"
+msgstr "Birthday"
+
+#: accounts/templates/accounts/profile.html:96
+msgid "Сохранить"
+msgstr "Save"
+
+#: accounts/templates/accounts/profile.html:97
+msgid "Удалить профиль"
+msgstr "Delete profile"
+
+#: accounts/templates/accounts/profile.html:102
+msgid "Способы авторизации"
+msgstr "Authorization methods"
+
+#: accounts/templates/accounts/profile_edit.html:4
+msgid "Редактирование профиля"
+msgstr "Profile edit"
+
+#: accounts/templates/accounts/signup.html:4
+msgid "Регистрация"
+msgstr "SignUp"
+
+#: accounts/templates/accounts/user_edit.html:4
+msgid "Редактирование пользователя"
+msgstr "User edit"
+
+#: accounts/templates/accounts/user_info.html:4
+msgid "Информация пользователя"
+msgstr "User info"
+
+#: accounts/templates/accounts/user_list.html:4
+msgid "Список пользователей"
+msgstr "User list"
+
+#: accounts/views.py:61
+msgid "Form submission successful."
+msgstr ""
+
+#: accounts/views.py:152
+#, python-brace-format
+msgid "1 user"
+msgid_plural "{count} users"
+msgstr[0] "1 user"
+msgstr[1] "{count} users"
+
+#: mysite/settings.py:145
+msgid "English"
+msgstr ""
+
+#: mysite/settings.py:146
+msgid "Russian"
+msgstr ""
+
+#: shopapp/templates/shopapp/order_confirm_cancel.html:4
+msgid "Подтверждение отмены"
+msgstr "Confirm cancel"
+
+#: shopapp/templates/shopapp/order_detail.html:4
+msgid "Информация о заказе"
+msgstr "Order info"
+
+#: shopapp/templates/shopapp/order_list.html:4
+msgid "Список заказов"
+msgstr "Order list"
+
+#: shopapp/templates/shopapp/order_update.html:4
+msgid "Изменение заказа"
+msgstr "Update order"
+
+#: shopapp/templates/shopapp/product_confirm_archive.html:4
+msgid "Подтверждение архивации"
+msgstr "Confirm archived"
+
+#: shopapp/templates/shopapp/product_create.html:4
+msgid "Создание продукта"
+msgstr "Product create"
+
+#: shopapp/templates/shopapp/product_details.html:4
+msgid "Информация о товаре"
+msgstr "Product info"
+
+#: shopapp/templates/shopapp/product_update.html:4
+msgid "Редактирование товара"
+msgstr "Edit product"

@@ -1,0 +1,49 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Информация о товаре" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="shopapp__title-container">
+    <div class="shopapp__button-container">
+      <h1 class="h1__title">{{ product.name }}</h1>
+      <form>
+        <button formaction="{% url "shopapp:products_list" %}" class="back-button">Вернуться к списку</button>
+      </form>
+    </div>
+    <div class="shopapp__button-container">
+      {% if user.is_staff %}
+        <form>
+          <button formaction="{% url "shopapp:product_update" pk=product.pk %}" class="mild-button">Редактировать</button>
+        </form>
+        <form>
+          <button formaction="{% url "shopapp:product_archive" pk=product.pk %}" class="light-button">Архивировать</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+  <div class="product__detail-img-container">
+    {% if product.preview %}
+      <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}" class="product__details-product-img">
+    {% endif %}
+    <div class="product__detail-list-img-container">
+      {% for img in product.images.all %}
+        <img src="{{ img.image.url }} " alt="{{ img.image.name }}" class="product__details-list-img">
+      {% empty %}
+        <div></div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="product__detail-price-container">
+    <h1 class="product__product-price">{{ product.price|floatformat }}</h1>
+    <h3>Скидка: {{ product.discount }}%</h3>  
+    {% if product.archived %}
+      <h4>В архиве</h4> 
+    {% endif %}
+  </div>
+  <div class="product__detail-descr-container">
+    <div>Описание: <em>{{ product.description }}</em></div>
+  </div>
+{% endblock body %}

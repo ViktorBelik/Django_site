@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="shopapp.product" pk="1">
+        <field name="name" type="CharField">Laptop</field>
+        <field name="description" type="TextField">A new Laotop</field>
+        <field name="price" type="DecimalField">43000.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">3</field>
+        <field name="created_at" type="DateTimeField">2026-01-31T00:35:06.499899+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_1/preview/5073d2921eac7f9bd80215bc520b3c1be8df628a61829a2c7912ec412c515af5.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="2">
+        <field name="name" type="CharField">Smartphone</field>
+        <field name="description" type="TextField">A new Smartphone</field>
+        <field name="price" type="DecimalField">13000.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-01-31T00:37:49.574546+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_2/preview/3f07b1ffa9193a775d83d5a74fa818307037b9e0cf34e51a18ac31304fceefb9.jpg.webp</field>
+    </object>
+    <object model="shopapp.product" pk="3">
+        <field name="name" type="CharField">Laptop 2</field>
+        <field name="description" type="TextField">Laptop 2</field>
+        <field name="price" type="DecimalField">56800.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">2</field>
+        <field name="created_at" type="DateTimeField">2026-01-31T00:40:53.913834+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_3/preview/b58e3b5e273b3d58015ee643b4dc0bcf65653ef6e13084300d2b1b0ea79f4884.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="4">
+        <field name="name" type="CharField">Desktop</field>
+        <field name="description" type="TextField">A new Desktop</field>
+        <field name="price" type="DecimalField">120000.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">1</field>
+        <field name="created_at" type="DateTimeField">2026-01-31T00:49:03.368316+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">19fffb51-6d3c-4f99-b7b6-55e89991f614</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_4/preview/fd5bf0e0881688bc53605a7d795063a6d0a1ed3beea944fbb52719a444a07f4f.png</field>
+    </object>
+    <object model="shopapp.product" pk="5">
+        <field name="name" type="CharField">Desktop 2</field>
+        <field name="description" type="TextField">Desktop 2 / i / 99/ 10890</field>
+        <field name="price" type="DecimalField">55800.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">5</field>
+        <field name="created_at" type="DateTimeField">2026-02-02T23:21:03.782374+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_5/preview/a820fcef45b5cc1918d68ba9053300d0ba0348e764772d9dd7b86c30e2dfa580.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="6">
+        <field name="name" type="CharField">Smartphone 2</field>
+        <field name="description" type="TextField">Smartphone</field>
+        <field name="price" type="DecimalField">25800.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-02-02T23:21:40.034993+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_6/preview/4ed93379c3d56a4d4f246b63f84e608d7f4f379258d4f1837bca03212910f86e.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="7">
+        <field name="name" type="CharField">Tablet</field>
+        <field name="description" type="TextField">A new Tablet</field>
+        <field name="price" type="DecimalField">3400.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-02-11T12:28:12.068525+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_7/preview/Laptop_1.png</field>
+    </object>
+    <object model="shopapp.product" pk="8">
+        <field name="name" type="CharField">Tablet 2</field>
+        <field name="description" type="TextField">A new Tablet 2</field>
+        <field name="price" type="DecimalField">15600.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">1</field>
+        <field name="created_at" type="DateTimeField">2026-02-11T12:30:12.053985+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField">products/product_8/preview/Laptop_2.jpg</field>
+    </object>
+    <object model="shopapp.product" pk="9">
+        <field name="name" type="CharField">Smartphone 3</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">23999.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-02-19T08:04:03.477352+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="10">
+        <field name="name" type="CharField">Smartphone 4</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">25000.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-02-19T08:04:03.477371+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+    <object model="shopapp.product" pk="11">
+        <field name="name" type="CharField">Smartphone 5</field>
+        <field name="description" type="TextField"></field>
+        <field name="price" type="DecimalField">20500.00</field>
+        <field name="discount" type="PositiveSmallIntegerField">10</field>
+        <field name="created_at" type="DateTimeField">2026-02-19T08:04:03.477379+00:00</field>
+        <field name="created_by" rel="ManyToOneRel" to="accounts.user">731b7175-9b91-4355-a441-158959a87c76</field>
+        <field name="archived" type="BooleanField">False</field>
+        <field name="preview" type="FileField"></field>
+    </object>
+</django-objects>

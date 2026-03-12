@@ -1,0 +1,48 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Каталог" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="shopapp__title-container">
+    <h1 class="h1__title">Каталог продуктов</h1>
+    <div>
+      {% if perms.shopapp.add_product %}
+        <a href="{% url 'shopapp:product_create' %}" class="mild-button">Добавить продукт</a>
+      {% endif %}
+    </div>
+  </div>
+  {% if products %}
+    <div>
+      {% for product in products %}
+        <div class="product__catalog-product">
+          <div class="product__product-img-container">
+            {% if product.preview %}
+              <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}" class="product__product-img">
+            {% else %}
+              <div class="product__product-img"></div>
+            {% endif %}
+          </div>
+          <a href=" {% url "shopapp:product_details" pk=product.pk %}" class="product__product-link">
+            <span>{{ product.name }} ({{ product.description }})</span>
+          </a>
+          <div>
+            <h2 class="product__product-price">{{ product.price|floatformat }}</h2>
+            <span>Скидка: {% firstof product.discount "0" %}%</span>
+            <div>
+              <br>
+              <button class="product__buy-button">Купить</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="product__pagination">
+      <a href="#" class="product__link">Показать ещё</a>
+    </div>
+  {% else %}
+    <h3>Продуктов ещё нет</h3>
+  {% endif %}
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Подтверждение отмены" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="order__cancel-container">
+    <h3 class="product__h3">Вы уверены, что хотите отменить заказ {{ object.name }}?</h3>
+    <div class="shopapp__confirm-button-container">
+      <form method='post'>
+        {% csrf_token %}
+        <button type='submit' class="light-button">Отменить</button>
+      </form>
+      <a href="{% url "shopapp:order_details" pk=object.pk %}" class="color-button">Вернуться к заказу</a>
+    </div>
+  </div>
+{% endblock body %}

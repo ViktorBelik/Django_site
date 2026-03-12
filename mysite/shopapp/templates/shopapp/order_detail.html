@@ -1,0 +1,37 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Информация о заказе" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="shopapp__title-container">
+    <div class="shopapp__button-container">
+      <h1 class="h1__title">Заказ №{{ object.pk }}</h1>
+    </div>
+  </div>
+  <div class="order__base-container">
+    <div class="order__create-container">
+      <div class="order__create-container-grid">
+        <span>Адрес доставки</span>
+        <input type="text" value="{{ object.delivery_address }}">
+        <span>Товары</span>
+        <select multiple>
+          {% for product in object.products.all %}
+          <option value="{{ forloop.counter }}" select>{{ product.name }} - {{ product.price|floatformat }}</option>
+          {% endfor %}
+        </select>
+        <span>Промокод</span>
+        <input type="text" value="{{ object.promocode }}">
+      </div>
+      <div class="order__button-container">
+        <a href="{% url "shopapp:order_cancel" pk=object.pk %}" class="order__link-del">Отменить заказ</a>
+      </div>
+    </div>
+    <div class="order__actions-container">
+      <a href="{% url 'shopapp:orders_list' %}" class="light-button">Список заказов</a>
+      <a href="{% url "shopapp:order_update" pk=object.pk %}" class="color-button">Изменить заказ</a>
+    </div>
+  </div>
+{% endblock body %}

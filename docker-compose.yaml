@@ -1,0 +1,37 @@
+# version: "3.9"
+
+services:
+  webapp:
+    build:
+      dockerfile: ./Dockerfile
+    command: 
+      - "python"
+      - "manage.py"
+      - "runserver"
+      - "0.0.0.0:8080"
+    ports:
+      - "8000:8080"
+    restart: always
+    env_file:
+      - .env
+    logging:
+      driver: loki
+      options: 
+        loki-url: http://158.160.214.199:3100/loki/api/v1/push
+    volumes:
+      - ./mysite/database:/app/database
+
+  grafana:
+    image: grafana/grafana:12.3.3
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    ports:
+      - "3000:3000"
+    restart: always
+    
+  loki:
+    image: grafana/loki:3.6.7
+    ports:
+      - "3100:3100"
+    restart: always

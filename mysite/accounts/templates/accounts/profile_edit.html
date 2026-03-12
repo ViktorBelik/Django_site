@@ -1,0 +1,28 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Редактирование профиля" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="accounts__title-container">
+    <h1 class="h1__title">Редактирование профиля {{ user.username }}</h1>
+  </div>
+  <div class="profile__info-user">
+    <div class="profile__avatar">
+      {% if user.avatar %}
+        <img src="{{ user.avatar.url }}" alt="Photo by {{ user.username }}" class="profile__avatar-img">
+      {% else %}
+        <img src="{{ default_image }}" alt="Default User" class="profile__avatar-img">
+      {% endif %}
+    </div>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type='submit' class="color-button">Сохранить</button>
+      <a class="light-button" href="{% url 'accounts:profile' %}">Отмена</a>
+      {% comment %} <button onclick="window.history.back()" class="light-button">Отмена</button> {% endcomment %}
+    </form>
+  </div>
+{% endblock body %}

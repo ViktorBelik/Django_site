@@ -1,0 +1,39 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Группы" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="accounts__title-container">
+    <h1 class="h1__title">Группы</h1>
+  </div>
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Создать</button>
+    </form>
+  </div>
+  <div>
+    {% if not groups %}
+      <h3>Групп пока нет</h3>
+    {% else %}
+      <ul>
+        {% for group in groups %}
+          <li>
+            <div>{{ group.name }}</div>
+            <ul>
+              {% for permission in group.permissions.all %}
+              <li>
+                {{ permission.name }}
+                <code>({{ permission.codename }})</code>
+              </li>{% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock body %}

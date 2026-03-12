@@ -1,0 +1,118 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Профиль" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="accounts__title-container">
+    <h1 class="h1__title">{% translate "Настройки профиля" %}</h1>
+  </div>
+  <div class="profile__base-container">
+    <div class="profile__menu-container">
+        <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">{% translate "Заказы" %}</a>
+        <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">{% translate "Мои отзывы" %}</a>
+        <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">{% translate "Подписки" %}</a>
+        <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">{% translate "Бонусы" %}</a>
+        <a href="{% url 'accounts:user-list' %}" class="profile__menu-link">{% translate "Пользователи" %}</a>
+    </div>
+    <div class="profile__info-container">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="profile__info-user">
+          <div class="profile__avatar-container">
+            <div class="profile__avatar-popup">
+              <div class="profile__avatar">
+                {% if user.avatar %}
+                  <img src="{{ user.avatar.url }}" alt="Photo by {{ user.username }}" class="profile__avatar-img">
+                {% else %}
+                  <img src="{{ default_image }}" alt="Default User" class="profile__avatar-img">
+                {% endif %}
+                <div class="profile__avatar-edit avatar-edit-popup"></div>
+              </div>
+              <div class="profile__avatar-popup-edit">
+                <label for="avatar-edit" class="profile__avatar-popup-edit-label">{% translate "Изменить" %}</label>
+                <input id="avatar-edit" hidden="" type="file" accept="image/*" name="avatar" value="{{ user.avatar }}">
+              </div>
+            </div>
+            <div class="profile__username">
+              <h3 class="profile__h3">{{ user.username }}</h3>
+              <span class="profile__span">{% translate "Дата регистрации" %}: {{ user.date_joined|date:"j E Y" }}</span>
+            </div>
+            <a class="light-button profile__exit-link" href="{% url 'accounts:logout' %}">
+              <div class="profile__exit-img"></div>
+              <span class="profile__exit-span">{% translate "Выйти" %}</span>
+            </a>
+          </div>
+          <div class="profile__field-container">
+            <div class="profile__field">
+              <label class="profile__label">{% translate "Имя" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.first_name }}" class="profile__input" name="first_name">
+              </div>
+            </div>
+            <div class="profile__field">
+              <label class="profile__label">{% translate "Фамилия" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.last_name }}" class="profile__input" name="last_name">
+              </div>
+            </div>
+            <div class="profile__field">
+              <label class="profile__label">{% translate "Email" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.email }}" class="profile__input" name="email">
+              </div>
+            </div>
+            <div class="profile__field">
+              <label class="profile__label">{% translate "Телефон" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.phone }}" class="profile__input" name="phone">
+              </div>
+            </div>
+            <div class="profile__field">
+              <label class="profile__label">{% translate "О себе" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.about_me }}" class="profile__input" name="about_me">
+              </div>
+            </div>
+            <div class="profile__field">
+              <label class="profile__label">{% translate "День рождения" %}</label>
+              <div class="profile__input-container">
+                <input value="{{ user.date_birth|date:"d.m.Y" }}" class="profile__input" name="date_birth">
+              </div>
+            </div>
+          </div>
+          <div class="profile__errors-container">
+            {% if form.errors %}
+              {% for key, error in form.errors.items %}
+                {% for data in error %}
+                  <span>{{ data }}</span>
+                {% endfor %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="profile__button-container">
+            <button type='submit' class="mild-button">{% translate "Сохранить" %}</button>
+            <a class="profile__link-del" scf="#">{% translate "Удалить профиль" %}</a>
+          </div>
+        </div>
+      </form>
+      <details class="profile__info-login">
+          <summary class="profile__summary">{% translate "Способы авторизации" %}</summary>
+          <div class="profile__login-container">
+          <div class="profile__login-container-block-gos">
+            <h4 class="profile__h4-login"><span style="color: #ff4800">ГОС</span><span style="color: #0051ff">УСЛУГИ</span></h4>
+          </div>
+          <div class="profile__login-container-block-sber">
+            <h4 class="profile__h4-login">SBER ID</h4>
+          </div>
+          <div class="profile__login-container-block-mts">
+            <h4 class="profile__h4-login">MTC ID</h4>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+{% endblock body %}
+  

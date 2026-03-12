@@ -1,0 +1,19 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Подтверждение архивации" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="product__archived-container">
+    <h3 class="order__h3">Вы уверены, что хотите архивировать {{ object.name }}?</h3>
+    <div class="shopapp__confirm-button-container">
+      <form method='post'>
+        {% csrf_token %}
+        <button type='submit' class="light-button">Архивировать</button>
+      </form>
+      <a href="{% url "shopapp:product_details" pk=object.pk %}" class="color-button">Вернуться к продукту</a>
+    </div>
+  </div>
+{% endblock body %}

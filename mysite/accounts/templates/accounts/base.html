@@ -1,0 +1,209 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href={% static "img/favicons/favicon32.png" %} type="image/png">
+    {% comment %} <link rel="manifest" href="manifest.webmanifest"> {% endcomment %}
+    <title>
+      DTE | {% translate "Магазин цифровой и бытовой техники" %} |
+      {% block title %}{% endblock title %}
+    </title>
+    {# stylesheet #}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/shopapp.css' %}" type="text/css">
+    {# font #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans" type="text/css"/>
+    {# script #}
+    <script src="{% static 'js/base.js' %}"></script>
+  </head>
+
+  <body>
+
+    <div class="callback-popup-container">
+      <form method="post" class="popup">
+        {% csrf_token %}
+        <input type="text" class="popup__input" name="name" placeholder="Введите ваше имя">
+        <input type="email" class="popup__input" name="email" placeholder="Введите ваш email">
+        <div>
+          <button type="reset" class="light-button">{% translate "Сбросить" %}</button>
+          <button type="submit" class="color-button">{% translate "Отправить" %}</button>
+        </div>
+      </form>
+    </div>
+
+    <header class="header">
+      <div class="fixed-container">
+        <div class="header__container">
+          <div class="header__main-container">
+            <div class="header__main">
+              <a href="{% url 'shopapp:main' %}" class="header__main-link">
+                <div class="header__main-logo"></div>
+              </a>
+              <div class="header__main-tooltip">{% translate "Вернуться на главную" %}</div>
+            </div>
+          </div>
+          <div class="header__info">
+            <a href="{% url 'shopapp:products_list' %}" class="header__link-catalog">
+              <div class="header__catalog-container">
+                <span>{% translate "Каталог" %}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <path fill="#535353" fill-rule="evenodd" d="M4.203 7.434a.625.625 0 0 1 .884 0l4.916 4.916 
+                    4.916-4.916a.625.625 0 1 1 .884.884l-5.358 5.358a.625.625 0 0 1-.884 0L4.203 8.318a.625.625 0 0 1 0-.884" 
+                    clip-rule="evenodd">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <div class="header__title-container">
+              <a href="{% url 'shopapp:products_list' %}" class="header__title-container-link">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66797 2.41797C3.42518 2.41797 2.41797 
+                    3.42518 2.41797 4.66797V17.332C2.41797 18.5748 3.42518 19.582 4.66797 19.582H17.334C18.5767 
+                    19.582 19.5842 18.5747 19.585 17.3315V4.66797C19.585 3.42518 18.5778 2.41797 17.335 
+                    2.41797H4.66797ZM0.917969 4.66797C0.917969 2.59676 2.59676 0.917969 4.66797 0.917969H17.335C19.4062 
+                    0.917969 21.085 2.59676 21.085 4.66797V17.332C21.0837 19.4027 19.4053 21.082 17.334 
+                    21.082H4.66797C2.59676 21.082 0.917969 19.4032 0.917969 17.332V4.66797ZM11.001 6.25097C11.4152 
+                    6.25097 11.751 6.58675 11.751 7.00097V14.999C11.751 15.4132 11.4152 15.749 11.001 15.749C10.5868 
+                    15.749 10.251 15.4132 10.251 14.999V7.00097C10.251 6.58675 10.5868 6.25097 11.001 6.25097ZM15.001 
+                    9.24997C15.4152 9.24997 15.751 9.58576 15.751 9.99997L15.751 14.999C15.751 15.4132 15.4152 15.749 
+                    15.001 15.749C14.5868 15.749 14.251 15.4132 14.251 14.999L14.251 9.99997C14.251 9.58575 14.5868 
+                    9.24997 15.001 9.24997ZM7.00097 11.583C7.41518 11.583 7.75097 11.9188 7.75097 12.333V14.999C7.75097 
+                    15.4132 7.41518 15.749 7.00097 15.749C6.58676 15.749 6.25097 15.4132 6.25097 14.999V12.333C6.25097 
+                    11.9188 6.58676 11.583 7.00097 11.583Z" fill="#979797"></path>
+                  </svg>
+                </span>
+                <span>{% translate "Сравнение" %}</span>
+              </a>
+              <a href="{% url 'shopapp:products_list' %}" class="header__title-container-link">
+                <span>
+                  <svg width="22" height="22" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 6.36912C0.25 3.07041 2.65767 0.25 
+                    5.79925 0.25C7.49913 0.25 8.99404 1.08608 10 2.36847C11.0059 1.08613 12.5006 0.25 14.1996 
+                    0.25C17.3423 0.25 19.75 3.07167 19.75 6.36912C19.75 7.69532 19.2489 8.97129 18.5251 
+                    10.1284C17.7997 11.2883 16.8229 12.3733 15.8015 13.3326C13.7592 15.2508 11.4589 16.7397 
+                    10.3901 17.3906C10.1504 17.5365 9.84927 17.5365 9.60965 17.3904C8.54109 16.7391 6.24079 
+                    15.2501 4.19851 13.3322C3.17709 12.3729 2.20033 11.288 1.47488 10.1283C0.751138 8.97123 
+                    0.25 7.69533 0.25 6.36912ZM5.79925 1.75C3.63983 1.75 1.75 3.73625 1.75 6.36912C1.75 7.31789 
+                    2.11117 8.31698 2.74658 9.33278C3.38027 10.3458 4.25947 11.3316 5.22537 12.2387C6.94066 
+                    13.8496 8.86662 15.1546 10.0001 15.8678C11.1335 15.1552 13.0594 13.8502 14.7746 12.2392C15.7405 
+                    11.3321 16.6197 10.3462 17.2534 9.33299C17.8888 8.31707 18.25 7.3179 18.25 6.36912C18.25 
+                    3.73751 16.3602 1.75 14.1996 1.75C12.7203 1.75 11.3843 2.66549 10.6719 4.10155C10.5452 4.35679 
+                    10.2849 4.51824 10 4.51824C9.71508 4.51824 9.45476 4.35679 9.32813 4.10155C8.61575 2.66559 
+                    7.2798 1.75 5.79925 1.75Z" fill="#979797"></path>
+                  </svg>
+                </span>
+                <span>{% translate "Избранное" %}</span>
+              </a>
+              <a href="{% url 'shopapp:order_create' %}" class="header__title-container-link">
+                <span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 3C2.25 2.58579 2.58579 2.25 3 
+                    2.25H4.38197C5.04482 2.25 5.65078 2.6245 5.94721 3.21738L5.27639 3.55279L5.94721 3.21738L6.46353 
+                    4.25H20.1384C21.0982 4.25 21.6999 5.28685 21.2237 6.12017L17.9391 11.8682C17.6275 12.4135 17.0477 
+                    12.75 16.4197 12.75H8.91567L7.59225 14.8675C7.48818 15.034 7.60789 15.25 7.80425 15.25H19C19.4142 
+                    15.25 19.75 15.5858 19.75 16C19.75 16.4142 19.4142 16.75 19 16.75H7.80425C6.42974 16.75 5.59176 
+                    15.2381 6.32025 14.0725L7.67159 11.9103L5.30898 5.295L4.60557 3.8882C4.56322 3.8035 4.47666 3.75 
+                    4.38197 3.75H3C2.58579 3.75 2.25 3.41421 2.25 3ZM7.06427 5.75L9.02855 11.25H16.4197C16.5094 11.25 
+                    16.5922 11.2019 16.6368 11.124L19.7076 5.75H7.06427ZM10 19.5C10 20.3284 9.32843 21 8.5 21C7.67157 
+                    21 7 20.3284 7 19.5C7 18.6716 7.67157 18 8.5 18C9.32843 18 10 18.6716 10 19.5ZM17.5 21C18.3284 21 
+                    19 20.3284 19 19.5C19 18.6716 18.3284 18 17.5 18C16.6716 18 16 18.6716 16 19.5C16 20.3284 16.6716 
+                    21 17.5 21Z" fill="#979797"></path>
+                  </svg>
+                </span>
+                <span>{% translate "Корзина" %}</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <a href="{% url 'accounts:profile' %}" class="header__profile-link">
+              <svg width="54" height="54" viewBox="0 0 46 46" fill="none">
+                <circle cx="22.8" cy="22.8" r="21.4" stroke="url(#gradient-1)" stroke-width="2" fill="none" />
+                <foreignObject x="4" y="4" width="38" height="38" class="header__profile-avatar">
+                  {% if user.is_authenticated and user.avatar %}
+                    <img class="header__profile-img" src="{{ user.avatar.url }}" alt="Photo by {{ user.username }}">
+                  {% else %}
+                    <img class="header__profile-img" src="{% static "img/avatar/default_user.png" %} " alt="Default User">
+                  {% endif %}
+                </foreignObject>
+                <defs>
+                  <linearGradient id="gradient-1">
+                    <stop offset="0%" stop-color="#2baaff"/>
+                    <stop offset="100%" stop-color="#9bf2fd"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="fixed-container">
+        {% block body %}
+        {% endblock body %}
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="fixed-container">
+        <div class="footer__container">
+
+          <div class="navmenu__group">
+            <h6 class="navmenu__title">{% translate "Покупателям" %}</h6>
+            <ul class="navmenu__submenu">
+              <li class="submenu__li">
+                <a href="{% url 'shopapp:main' %}" class="submenu__li__link">{% translate "Главная" %}</a>
+              </li>
+              <li class="submenu__li">
+                <a href="{% url 'shopapp:products_list' %}" class="submenu__li__link">{% translate "Каталог" %}</a>
+              </li>
+              <li class="submenu__li">
+                <a href="{% url 'shopapp:products_list' %}" class="submenu__li__link">{% translate "Сравнение" %}</a>
+              </li>
+              <li class="submenu__li">
+                <a href="{% url 'shopapp:products_list' %}" class="submenu__li__link">{% translate "Избранное" %}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navmenu__group">
+            <h6 class="navmenu__title">{% translate "Контакты" %}</h6>
+            <ul class="navmenu__submenu">
+              <li class="submenu__li">
+                <span>bel.var.dev@gmail.com</span>
+              </li>
+              <li class="submenu__li">
+                <span>+7 (999) 000-00-77</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <button class="footer__button-callback callback-popup">{% translate "Связаться" %}</button>
+            <div class="footer__social-links">
+              <a href="#">
+                <div class="menu-contacts__telegram"></div>
+              </a>
+              <a href="#">
+                <div class="menu-contacts__max"></div>
+              </a>
+              <a href="#">
+                <div class="menu-contacts__skype"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

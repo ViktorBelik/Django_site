@@ -1,0 +1,39 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Вход" %}
+{% endblock title %}
+
+{% block body %}
+<div class="login__base-container">
+    {% if messages %}
+      <div class="login__successful-container">
+        {% for message in messages %}
+          <div> {{ message }} </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="login__block-container">
+      <h3 class="login__h3">Вход</h3>
+      <form method="post">
+        {% csrf_token %}
+        <div class="login__input-container">
+          {{ form.username }}
+          {{ form.password }}
+          <div class="login__errors-container">
+            {% if form.errors %}
+              {% for key, error in form.errors.items %}
+                {% for data in error %}
+                  <span>{{ data }}</span>
+                {% endfor %}
+              {% endfor %}
+            {% endif %}
+          </div>
+          <button type="submit" class="color-button">Войти</button>
+        </div>
+      </form>
+      <a href="{% url 'accounts:signup' %}" class="login__link">Регистрация</a>
+    </div>
+  </div>
+{% endblock body %}

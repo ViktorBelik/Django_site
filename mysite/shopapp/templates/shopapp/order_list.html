@@ -1,0 +1,56 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Список заказов" %}
+{% endblock title %}
+
+{% block body %}
+  <div class="shopapp__title-container">
+    <div class="shopapp__button-container">
+      <h1 class="h1__title">Заказы</h1>
+    </div>
+  </div>
+  <div class="order__base-container">
+    <div class="profile__menu-container">
+      <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">Заказы</a>
+      <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">Мои отзывы</a>
+      <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">Подписки</a>
+      <a href="{% url 'shopapp:orders_list' %}" class="profile__menu-link">Бонусы</a>
+      <a href="{% url 'accounts:user-list' %}" class="profile__menu-link">Пользователи</a>
+    </div>
+    <div class="order__list-container">
+      {% if orders %}
+        {% for order in orders %}
+          <div class="order__container">
+            <div class="order__order-title">
+              <a href=" {% url "shopapp:order_details" pk=order.pk %}" class="order__link">
+                Заказ №{{ order.pk }}
+              </a>
+              <div class="order__order-title-address">
+                Адрес: {{ order.delivery_address }}
+              </div>
+            </div>
+            <div class="order__product-list">
+              {% for product in order.products.all %}
+                <div class="order__product-container">
+                  <div class="order__hidden">
+                    <div class="order__product-title">{{ product.name }}</div> 
+                    <div class="order__product-price">{{ product.price|floatformat }}</div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="order__container">
+          <h3>Заказов пока нет</h3>
+        </div>
+      {% endif %}
+      <div class="order__pagination">
+        <a href="#" class="order__link">Показать ещё</a>
+      </div>
+    </div>
+  </div>
+{% endblock body %}

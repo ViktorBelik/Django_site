@@ -1,0 +1,26 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+
+{% block title %}
+  {% translate "Редактирование товара" %}
+{% endblock title %}
+
+{% block body %}
+<div class="shopapp__title-container">
+  <div class="shopapp__button-container">
+    <h1 class="h1__title">Редактирование {{ object.name }}</h1>
+  </div>
+</div>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="product__base-container">
+    <div class="product__create-container">
+      {{ form.as_p }}
+    </div>
+    <div class="product__actions-container">
+      <a href="{% url 'shopapp:product_details' pk=object.pk %}" class="light-button">Отмена</a>
+      <button type='submit' class="color-button">Сохранить</button>
+    </div>
+  </div>
+</form>
+{% endblock body %}
