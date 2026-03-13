@@ -282,18 +282,37 @@ drf = ["djangorestframework"]
 
 [[package]]
 name = "django-jazzmin"
-version = "3.0.3"
+version = "3.0.4"
 description = "Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 5 to make yo' admin look jazzy"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "django_jazzmin-3.0.3-py3-none-any.whl", hash = "sha256:a0e6afecf8a792eeaba06c7713ecddcfc6cbf349e47466cea2d484283eb87f31"},
-    {file = "django_jazzmin-3.0.3.tar.gz", hash = "sha256:ed830ae4a0509aeec8e2caa626965c5dd72f11da83776807ba2a807fc99584d5"},
+    {file = "django_jazzmin-3.0.4-py3-none-any.whl", hash = "sha256:70935a17604cc530e99be68d3d2b8c576095e1dac4af50464c827d66646f40fa"},
+    {file = "django_jazzmin-3.0.4.tar.gz", hash = "sha256:e8aef8b75edd8792408a69407c22ece924ab7a3d5c9d6f84d7a4eb57e06e7a44"},
 ]
 
 [package.dependencies]
 django = ">=4.2"
+
+[[package]]
+name = "django-phonenumber-field"
+version = "8.4.0"
+description = "An international phone number field for django models."
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "django_phonenumber_field-8.4.0-py3-none-any.whl", hash = "sha256:7a1cb3a6456edb54d879f11ffa0acb227ded08c93b587035d0f28093f0e46511"},
+    {file = "django_phonenumber_field-8.4.0.tar.gz", hash = "sha256:2b83e843dac35eec6a69880a166487235b737a71a1e38c9a52e5ad67d6996083"},
+]
+
+[package.dependencies]
+Django = ">=4.2"
+
+[package.extras]
+phonenumbers = ["phonenumbers (>=7.0.2)"]
+phonenumberslite = ["phonenumberslite (>=7.0.2)"]
 
 [[package]]
 name = "djangorestframework"
@@ -553,14 +572,14 @@ tests = ["pytest (>=9)", "typing-extensions (>=4.15)"]
 
 [[package]]
 name = "phonenumbers"
-version = "9.0.25"
+version = "9.0.26"
 description = "Python version of Google's common library for parsing, formatting, storing and validating international phone numbers."
 optional = false
 python-versions = ">=2.5"
 groups = ["main"]
 files = [
-    {file = "phonenumbers-9.0.25-py2.py3-none-any.whl", hash = "sha256:b1fd6c20d588f5bcd40af3899d727a9f536364211ec6eac554fcd75ca58992a3"},
-    {file = "phonenumbers-9.0.25.tar.gz", hash = "sha256:a5f236fa384c6a77378d7836c8e486ade5f984ad2e8e6cc0dbe5124315cdc81b"},
+    {file = "phonenumbers-9.0.26-py2.py3-none-any.whl", hash = "sha256:ff473da5712965b6c7f7a31cbff8255864df694eb48243771133ecb761e807c1"},
+    {file = "phonenumbers-9.0.26.tar.gz", hash = "sha256:9e582c827f0f5503cddeebef80099475a52ffa761551d8384099c7ec71298cbf"},
 ]
 
 [[package]]
@@ -1149,4 +1168,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "c94bf86bd50e318355ae7ffa9ab9142687118db836ebf4d1fc5fa23664ce7206"
+content-hash = "670a4e3e35837474341e9722195b1429f716842877fbc2b98666e26cc871328f"
