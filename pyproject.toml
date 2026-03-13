@@ -1,0 +1,28 @@
+[project]
+name = "django-site"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "BEL",email = "93378272+ViktorBelik@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django (>=6.0.3,<7.0.0)",
+    "djangorestframework (>=3.16.1,<4.0.0)",
+    "django-debug-toolbar (>=6.2.0,<7.0.0)",
+    "django-filter (>=25.2,<26.0)",
+    "pillow (>=12.1.1,<13.0.0)",
+    "gunicorn (>=25.1.0,<26.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "djlint (>=1.36.4,<2.0.0)",
+    "drf-spectacular (>=0.29.0,<0.30.0)",
+    "phonenumbers (>=9.0.25,<10.0.0)",
+    "argon2-cffi (>=25.1.0,<26.0.0)",
+    "django-jazzmin (>=3.0.3,<4.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
