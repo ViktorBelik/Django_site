@@ -4,21 +4,34 @@
 
 [![DTE](https://img.shields.io/badge/DTE-Интернет%20магазин-blue?logo=reasonstudios)](http://158.160.171.230:8000/shop/) [![Video](https://img.shields.io/badge/Видео-Демонстрация%20сайта-brightgreen?&logo=youtube&logoColor=red&labelColor=grey)](https://drive.google.com/file/d/1zCxhZMp4mwBI0tb13hLB87c12Yk4cJYL/view?usp=sharing)
 
-> [!IMPORTANT]
-> ip-адрес сайта меняется каждые 24 часа
 
-### Технологии
+## Django Shop
 
-- Создан с помощью фреймворка: ***Django 6.0***  
-- База данных ***SQLite3 + Django ORM***.  
-- Логирование: ***Grafana + Loki***.  
-- Профилирование: ***Django debug toolbar***.  
-- Проверка форматирования: ***flake8***.  
-- Проверка аннотаций с помощью: ***Pylance***.  
-- Осуществлена локализация и интернационализация приложения.  
-- При создании API и интерактивной документации использованы технологии: ***Django REST Framework***, ***DRF-spectacular***.  
+### 📌 Описание
+Backend интернет-магазина на Django + DRF
 
-### Скриншоты
+### 🚀 Функционал
+- регистрация и авторизация
+- корзина
+- заказы
+- API
+
+### 🛠 Стек
+Django, DRF, PostgreSQL, Redis, Docker
+
+### ⚙️ Запуск проекта
+
+docker-compose up --build
+
+### 📡 API примеры
+GET /api/products/
+POST /api/orders/
+
+### 🧠 Архитектура
+- apps: users, orders, products
+- разделение логики по слоям
+
+### 📷 Скриншоты
 
 <table>
   <tr>
@@ -65,6 +78,9 @@
   </tr>
 </table>
 <br>
+
+### 📷 Debug toolbar / Swagger 
+
 <table>
   <tr>
     <td>
